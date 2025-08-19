@@ -1,0 +1,765 @@
+/* Reset beberapa gaya default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur font dan warna umum */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+/* Membuat navbar dengan efek glassmorphism */
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 25px;
+    height: auto;
+    margin-right: 5px;
+}
+
+header h1 {
+    font-size: 18px;
+    /* font-weight: 700; */
+    margin: 0;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.551);
+}
+
+header .box {
+    display: inline-block;
+    background-color: #004aad; 
+    color: white; 
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-left: 2px;
+    font-family: "Montserrat", sans-serif;
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0); 
+    backdrop-filter: blur(10px); 
+    padding: 10px 20px;
+    display: flex;
+    border: #7777771d solid 1px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000; 
+    /* border-radius: 10px;  */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.nav-left a, .nav-right a {
+    color: transparent;
+    background: linear-gradient(to right, #fff, #ddd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+    transition: color 0.3s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.551);
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    color: #60a5fa; 
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+/* Styling untuk foto profil */
+.nav-right img {
+    width: 35px;              
+    height: 35px;              
+    border-radius: 50%;       
+    object-fit: cover;         
+    border: 2px solid white;
+    transition: .3s;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-right img:hover {
+      transform: scale(1.1);
+}
+
+.nav-right i.menu {
+    color: white;
+    background: #004aad;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    width: 30px;  
+    height: 30px; 
+    border-radius: 7px;
+    /* border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.nav-right i.menu:hover {
+    border-radius: 50%;
+    background-color: #555;
+    color: #ffffff;
+    padding: 12px;  
+    width: 34px;    
+    height: 34px;  
+}
+
+.nav-right i{
+    font-size: 18px;
+    /* margin-left: 1px; */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    width: 27px; 
+    height: 27px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.nav-right i:hover{
+    color: #ffffff;
+    padding: 12px;  
+    width: 30px;    
+    height: 30px;  
+}
+
+
+/* ==================nav-hd====== */
+#navbar {
+    display: none;
+}
+
+#navbar.active {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    margin-top: 11rem;
+    position: absolute;
+    border-radius: 5px;
+    width: auto;
+    background: #004aad;
+    padding: 10px 5px;
+    box-sizing: border-box;
+}
+
+#navbar a {
+    display: flex;
+    align-items: center; 
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 8px 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#navbar i {
+    font-size: 15px;
+    margin-right: 3px; 
+}
+
+#menu-icon {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+
+#navbar a:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* ========================= */
+
+.bg-atas {
+    width: 100%;
+    height: 100vh;
+    background-image: url('bg-foto/BG1.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.welcome {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    color: white;
+    text-align: left;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    padding: 20px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .bg-atas {
+        background-size: cover;
+        background-position: top center;
+        height: 50vh;
+    }
+
+    .welcome {
+        font-size: 2.5rem;
+        max-width: 90%;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bg-atas {
+        background-size: cover;
+        background-position: top center;
+        height: 50vh;
+    }
+
+    .welcome {
+        font-size: 2rem;
+        padding: 10px;
+    }
+}
+
+/*====================== Search bar styling========================== */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: white;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.search-bar input[type="text"]:focus {
+    background-color: #e0f2fe; 
+}
+
+.search-bar select {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.search-bar select:focus {
+    background-color: #e0f2fe; 
+}
+
+.search-bar input[type="submit"] {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar input[type="submit"]:hover {
+    background-color: #60a5fa;
+}
+/* ========================popoler cuy================================ */
+.popular-articles {
+    background-color: #ffffff;  
+    color: #333;  
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.isi-artikel {
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #1e3a8a #f5f7fa;
+}
+
+
+.populer {
+    background-color: #f5f7fa;
+    border-radius: 10px;
+    width: 280px;
+    min-width: 280px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.populer:not(:has(.gambar-populer)) {
+    background-color: #e9ecef;  
+}
+
+.populer:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.populer-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1e3a8a;
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+.populer-kutip {
+    font-size: 1.1rem;
+    color: #555;
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: italic;
+}
+
+.gambar-populer {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.tbl-populer {
+    display: inline-block;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.tbl-populer:hover {
+    background-color: #1a2c5e;
+}
+@media screen and (max-width: 768px) {
+    .popular-articles h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .isi-artikel {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        display: flex;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
+    }
+
+    .populer {
+        width: 100%;  
+        min-width: 100%;
+        flex-shrink: 0;
+        box-shadow: none; 
+        padding: 15px;  
+    }
+
+    .populer-title {
+        font-size: 1.4rem;
+    }
+
+    .populer-kutip {
+        font-size: 1rem;
+        height: auto; 
+    }
+
+    .tbl-populer {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .popular-articles h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .isi-artikel {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        display: flex;
+        scroll-snap-type: x mandatory;
+    }
+
+    .populer {
+        width: 90%; 
+        min-width: 90%;
+        padding: 10px;  
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    }
+
+    .populer-title {
+        font-size: 1.2rem;
+    }
+
+    .populer-kutip {
+        font-size: 0.9rem;
+    }
+
+    .tbl-populer {
+        padding: 8px 15px;  
+    }
+
+    .populer:not(:has(.gambar-populer)) .populer-kutip {
+        height: auto;  
+        font-size: 1rem;
+    }
+}
+
+
+
+/*========================= Kontainer utama==================== */
+.container {
+    width: 95%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.container h2 {
+    font-size: 28px;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk post card */
+.post-card {
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.post-title {
+    font-size: 20px;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.post-quote {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Styling untuk gambar di dalam post */
+.post-card img {
+    display: block;         
+    max-width: 15rem;      
+    height: auto;           
+    margin: 0 auto 15px;  
+    border-radius: 5px;
+}
+
+.content {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.post-info {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.tbl-pink {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.tbl-pink:hover {
+    background-color: #1a2c5e;
+}
+
+/* Pagination styling */
+.pagination {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.pagination a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #1e3a8a;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #60a5fa;
+}
+
+.pagination a.active {
+    background-color: #60a5fa;
+    color: white;
+}
+
+/* Tombol previous dan next */
+.prev-next-btn {
+    background-color: #4b6cb7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.prev-next-btn:hover {
+    background-color: #60a5fa;
+}
+
+
+
+/* ========responsip===== */
+@media (max-width: 768px) {
+
+    .container {
+    width: 100%;
+    }
+
+    .container h2{
+        font-size: 18px;
+    }
+
+    .post-title {
+        font-size: 18px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-left a, .nav-right a {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar input[type="text"] {
+        margin-bottom: 10px;
+    }
+
+    .post-card {
+        margin-bottom: 20px;
+    }
+
+    .content{
+        font-size: 15px;
+    }
+
+    .pagination {
+        font-size: 14px;
+    }
+    #navbar.active{
+        margin-top: 10rem;
+        padding: 10px 15px;
+    }
+
+    #navbar i{
+        font-size: 15px;
+    }
+    #navbar {
+        margin-top: 7rem;
+        padding: 8px;
+    }
+
+    #navbar a {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    #menu-icon {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .container h2{
+        font-size: 18px;
+    }
+    .post-title {
+        font-size: 16px;
+    }
+
+    .navbar {
+        padding: 10px 5px;
+    }
+
+    .nav-left a, .nav-right a {
+        font-size: 14px;
+    }
+
+    .search-bar input[type="text"], .search-bar input[type="submit"] {
+        font-size: 14px;
+    }
+
+    .post-quote {
+        font-size: 13px;
+    }
+
+    .content {
+        font-size: 12px;
+    }
+
+    .tbl-pink {
+        padding: 8px 15px;
+    }
+    .post-card .tbl-pink{
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    .post-card img{
+        max-width: 50%;
+    }
+    #navbar.active{
+        margin-top: 11rem;
+
+    }
+
+    #navbar i{
+        font-size: 13px;
+    }
+
+    #navbar a {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    #menu-icon {
+        font-size: 18px;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    .search-bar {
+        padding: 10px;
+    }
+
+    .post-card {
+        padding: 15px;
+    }
+
+    .post-title {
+        font-size: 16px;
+    }
+
+    .content {
+        font-size: 12px;
+    }
+
+    .pagination a {
+        padding: 8px 15px;
+    }
+    .post-card img{
+        max-width: 50%;
+    }
+}

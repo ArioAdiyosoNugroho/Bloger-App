@@ -1,0 +1,220 @@
+/* Container utama */
+.comment-container {
+    background: #fff;
+    padding: 20px;
+    margin-top: 2rem;
+    /* margin: auto; */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form komentar */
+.comment-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.komen {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    background: #f9f9f9;
+}
+
+.komen:focus {
+    border-color: #007bff;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.comment-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    min-width: 80px;
+}
+
+.comment-form button:hover {
+    background: #0056b3;
+}
+
+/* Komentar */
+.comment-section {
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.comment-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+/* Foto profil */
+.comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.role-admin {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.comment-text {
+    font-size: 14px;
+    color: #555;
+    margin-top: 3px;
+}
+
+/* Style untuk belum ada komentar */
+.no-comment {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Tombol kirim */
+.tbl-kirim {
+    background-color: #0056b3;
+    padding: 12px 25px;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.tbl-kirim:hover {
+    background-color: #003d75;
+}
+@media (max-width: 320px) {
+    .comment-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Responsif untuk layar kecil (Smartphone) */
+@media (max-width: 767px) {
+    .comment-container {
+        width: 95%; /* Lebar lebih besar pada perangkat kecil */
+        padding: 15px;
+    }
+
+    .comment-form {
+        /* flex-direction: column; */
+        gap: 10px;
+    }
+
+    .komen {
+        font-size: 16px;
+    }
+
+    .comment-item {
+        padding: 10px 0;
+    }
+
+    .username {
+        font-size: 16px; /* Meningkatkan ukuran teks untuk kenyamanan baca */
+    }
+
+    .comment-text {
+        font-size: 16px;
+    }
+
+    .comment-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .comment-form button {
+        padding: 10px 20px;
+    }
+
+    .tbl-kirim {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Responsif untuk tablet (di atas 768px hingga 1024px) */
+@media (max-width: 1024px) {
+    .comment-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .comment-item {
+        padding: 12px 0;
+    }
+
+    .comment-avatar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .comment-form button {
+        padding: 12px 22px;
+    }
+}
+
+/* Responsif untuk desktop */
+@media (min-width: 1025px) {
+    .comment-container {
+        width: 95%;
+    }
+
+    .comment-item {
+        padding: 15px 0;
+    }
+
+    .comment-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tbl-kirim {
+        padding: 12px 25px;
+    }
+}
