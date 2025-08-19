@@ -68,7 +68,7 @@ $_SESSION['role'] = $user['role'];
 
 <section id="profile" class="content-section">
     <div class="menu">
-        <a href="javascript:history.back()" class="back-link"><i class="fas fa-arrow-left"></i> Kembali</a>
+        <a href="../index.php" class="back-link"><i class="fas fa-arrow-left"></i> Kembali</a>
         <i class="fa-solid fa-ellipsis-vertical menu" id="menu-icon"></i>
 
     <nav id="navbar">
